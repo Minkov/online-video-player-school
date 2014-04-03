@@ -1,0 +1,23 @@
+<div>
+	<h1 data-bind="html: title"></h1>
+	<fieldset data-bind="visible: loginVisible">
+		<legend>Login</legend>
+		<label for="tb-login-username">Username:</label>
+		<input id="tb-login-username" data-bind="value: username"/><br/>
+		<label for="tb-login-password">Password:</label>
+		<input type="password" id="tb-login-password" data-bind="value: password"/><br/>
+		<button data-bind="events: {click: login}" class="button">Login</button>
+	</fieldset>	
+	<fieldset data-bind="visible: registerVisible">
+	<legend>Register</legend>
+		<label for="tb-register-username">Username:</label>
+		<input id="tb-register-username" data-bind="value: username"/><br/>
+		<label for="tb-register-displayname">Display name:</label>
+		<input id="tb-register-displayname" data-bind="value: displayname"/><br/>
+		<label for="tb-register-password">Password:</label>
+		<input type="password" id="tb-register-password" data-bind="value: password"/><br/>
+		<button data-bind="events: {click: register}" class="button">Register</button>
+	</fieldset>
+	<button data-type="register" data-bind="disabled: registerVisible, events: {click: switchForm}" class="button">New user?</button>
+	<button data-type="login" data-bind="disabled: loginVisible, events: {click: switchForm}"  class="button">Returning user?</button>
+</div>

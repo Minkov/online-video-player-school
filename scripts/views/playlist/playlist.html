@@ -1,0 +1,16 @@
+<h1 data-bind="html: title"></h1>
+<a data-bind="attr: {href: playerUrl}" id="btn-play" class="button">Play</a>
+<!-- add new video -->
+<div id="add-new-video">
+	<label for="tb-title">Title</label>
+	<input type="text" id="tb-title" data-bind="value: newTitle"><br />
+	<label for="tb-url">Url</label>
+	<input type="text" id="tb-url" data-bind="value: newUrl"><br />
+	<button data-bind="events: {click: addVideo}" class="button">Add</button>
+</div>
+
+<!-- list of vides-->
+<ul data-role="kendo.ui.Listview"
+	data-template="video-item-template"
+	data-bind="source: videos"
+></ul>

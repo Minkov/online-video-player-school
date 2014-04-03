@@ -1,0 +1,180 @@
+.clearfix{
+	zoom:1;
+
+	&:after{
+		display: block;
+		height: 0;
+		clear: both;
+		content:''
+	}
+}
+
+a{
+	color:black;
+	text-decoration: none;
+
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+ul{
+	list-style-type: none;
+}
+
+input{
+	display: inline-block;
+	padding:5px 15px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+}
+
+.button{
+	display: inline-block;
+	margin:0;
+	padding:5px 15px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	background: #fff;
+	&:hover{
+		background: #ccc;
+	}
+}
+
+#root{
+	display:block;
+	width:960px;
+	margin:0 auto;
+	padding:0;
+	font-size:14px;
+}
+
+#app-header{
+	border-bottom: 1px solid black;
+	h1{
+		display: inline-block;
+		width:35%;
+		border-right: 1px solid #ccc;
+	}
+	.clearfix();
+}
+
+#main-nav{
+	display: inline-block;
+	width: 60%;
+	text-align: right;
+
+	ul{
+		margin: 0;
+		padding:0;
+		list-style-type: none;
+	}
+
+	.nav-item{
+		.button();
+
+		margin:10px 0;
+		padding:0;
+		font-size:1.3em;
+
+		&:hover{
+			background: #ccc;
+		}
+		a{
+			display: inline-block;
+			padding:5px 15px;
+		}
+	}
+}
+
+#page{
+	display: inline-block;
+	width: 75%;
+	border-right:1px solid #ccc;
+
+	h1{
+		font-size: 2.2em;
+		text-align: center;
+	}
+
+	.playlists-list{
+		text-aling:left;
+
+		.playlist-item{
+			strong{
+				font-size:1.3em;
+			}
+		}
+	}
+}
+
+.playlists-list{
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+
+#player, #player-playlist{
+	display: inline-block;
+}
+
+#player{
+	width: 450px;
+	float:left;
+}
+
+#player-playlist{
+	width:200px;
+
+	li{
+		border-bottom:1px solid #ccc;
+		padding-bottom:5px;
+		margin-bottom: 10px;
+
+		&:last-of-type{
+			border:none;
+		}
+
+		.button{
+			display: block;
+			text-align: center;
+		}
+	}
+}
+
+#playlists-widget{
+	display:inline-block;
+	width:22%;
+	vertical-align: top;
+	h1{
+		text-align: center;
+	}
+	.playlists-list{
+		margin:0;
+		padding:0;
+		list-style-type: none;
+	}
+}
+#btn-play{
+	display: block;
+	margin:0 auto;
+	padding:22px;
+	height:35px;
+	background: #3EBDFF;
+	font-size:1.9em;
+	text-align: center;
+	color:#fff;
+
+	&:hover{
+		text-decoration: none;
+		font-size:2em;
+		font-weight: bold;
+		border-color: #fff;
+	}
+}
+
+#app-footer{
+	h2{
+		text-align: center;
+	}
+}

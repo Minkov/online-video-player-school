@@ -1,0 +1,8 @@
+<h1 data-bind="html: title"></h1>
+<h2 data-bind="html: currentVideo.Title"></h2>
+<iframe id='player' width="450" height="213" 
+ data-bind="attr: {src: currentVideo.Url}" frameborder="0" allowfullscreen></iframe>
+<ul id='player-playlist' data-role="kendo.ui.Listview"
+	data-template="video-item-template"
+	data-bind="source: videos"
+></ul>

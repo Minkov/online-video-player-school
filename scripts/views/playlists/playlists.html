@@ -1,0 +1,12 @@
+<h1 data-bind="html: title"></h1>
+<div id="add-playlist">
+	<label for="tb-title">
+	<input type="text" id="tb-title" data-bind="value: newTitle">
+	<button data-bind="events: {click: addPlaylist}" class="button">Add</button>
+</div>
+<!-- list of playlists -->
+<ul class="playlists-list"
+	data-role='kendo.ui.Listview'
+	data-template='playlist-item-template'
+	data-bind='source: playlists'
+></ul>
